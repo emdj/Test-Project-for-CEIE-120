@@ -1,0 +1,19 @@
+Performance link dump
+
+http://www.webpagetest.org/
+http://cssshrink.com/
+
+http://jscompress.com/
+http://javascript-minifier.com/
+http://jsperf.com/
+
+http://www.spritecow.com/
+http://spriteme.org/
+http://compass-style.org/help/tutorials/spriting/
+
+
+http://samsaffron.com/archive/2012/03/23/sam-s-ultimate-web-performance-tools-and-resources
+
+http://www.webperformancetoday.com/2014/08/19/10-popular-web-erformance-posts-2014/
+
+http://stevesouders.com/

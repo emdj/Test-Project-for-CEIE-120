@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loops!</title>
+</head>
+<body>
+	<h1>jQuery</h1>
+	<h2>$.each loop</h2>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+		<li>Brackets</li>
+	</ul>
+
+	<h3>Goal</h3>
+	<p>What is the difference between element,array, and object loops?</p>
+
+	<h3>Live Demo</h3>
+
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<script>
+
+		// Traditional JS "for" loop
+		for(var i = 0; i < 10; i++){
+			// console.log(i);
+		}
+
+		// jQuery "each" loops
+
+		// Using elements
+		$( "li" ).each(function(index, value){
+			// console.log( index + ": " + $( this ).text() );
+			// console.log( index + ": " + $(value).text() + " (using 'value' keyword)");
+		});
+
+		// Using an array
+		var animals = ["Antelope", "Bison", "Cariboo"];
+		$.each(animals, function(index, value){
+			// console.log( "Animal number " + index + " is a " + value + "." );
+		});
+
+		// Using an object
+		var produce = {
+			"Date": "fruit",
+			"Apple": "fruit",
+			"Beet": "vegetable",
+			"Celery": "vegetable"
+		};
+		$.each(produce, function(name, value){
+			// console.log( "Produce " + name + " is a " + value + "." );
+		});
+
+		// For links (using arrays)
+		var hrefs = ["home.html", "about_us.html", "contact_us.html"];
+		var labels = ["Home", "About Us", "Contact Us"];
+		$.each(labels, function(index, value){
+			// console.log(index + ": " + value + " - " + hrefs[index]);
+			$("body").append("<li><a href='" + hrefs[index] + "'>" + value + "</a></li>");
+		});
+
+		// For links (using an object)
+		var webpages = {
+			"Home": "home.html",
+			"About Us": "about_us.html",
+			"Contact Us": "contact_us.html"
+		};
+		$.each(webpages, function(label, href){
+			console.log(label + " -> " + href);
+		});
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

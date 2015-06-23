@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>0solution.html</title>
+	<link href="../04/chess.css" rel="stylesheet" type="text/css" />
+    <style>
+		.selected { outline: 3px dashed red; }
+	</style>
+</head>
+<body>
+
+<div style="float: left; width: 200px;">
+	<h3>Chess board</h3>
+	<ul>
+		<li>Download the HTML, CSS, and <a href="http://www.domaindesign.ca/code/chess/images.zip">images</a></li>
+		<li>Select a chess piece</li>
+		<li>Final goal: Use keyboard to move piece around board</li>
+	</ul>
+    <h3>First Goal</h3>
+    <p>As a user, select a chess piece to highlight the square with a red outline.</p>
+    <p>As a dev, loop through all the chess pieces and bind a click event. Handle the click by applying a CSS rule of border: red solid 2px</p>
+    <h3>Second Goal</h3>
+    <p>As a dev, bind the arrow keys to move the selected chess piece on the page</p>
+</div>
+
+<div id="chessboard">
+	<div class="piece" id="c1"></div>
+	<div class="piece" id="h1"></div>
+	<div class="piece" id="e1"></div>
+	<div class="piece" id="k1"></div>
+	<div class="piece" id="q1"></div>
+	<div class="piece" id="e2"></div>
+	<div class="piece" id="h2"></div>
+	<div class="piece" id="c2"></div>
+	<div class="piece wp" id="wp1"></div>
+	<div class="piece wp" id="wp2"></div>
+	<div class="piece wp" id="wp3"></div>
+	<div class="piece wp" id="wp4"></div>
+	<div class="piece wp" id="wp5"></div>
+	<div class="piece wp" id="wp6"></div>
+	<div class="piece wp" id="wp7"></div>
+	<div class="piece wp" id="wp8"></div>
+	<div class="piece bp" id="bp1"></div>
+	<div class="piece bp" id="bp2"></div>
+	<div class="piece bp" id="bp3"></div>
+	<div class="piece bp" id="bp4"></div>
+	<div class="piece bp" id="bp5"></div>
+	<div class="piece bp" id="bp6"></div>
+	<div class="piece bp" id="bp7"></div>
+	<div class="piece bp" id="bp8"></div>
+	<div class="piece" id="c3"></div>
+	<div class="piece" id="h3"></div>
+	<div class="piece" id="e3"></div>
+	<div class="piece" id="k2"></div>
+	<div class="piece" id="q2"></div>
+	<div class="piece" id="e4"></div>
+	<div class="piece" id="h4"></div>
+	<div class="piece" id="c4"></div>
+</div>
+
+<!-- Attach jQuery library -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Page code -->
+<script>
+    var selectPiece = function () {
+        $(".selected").removeClass("selected");
+        $(this).addClass("selected");
+    };
+    var movePiece = function (event) {
+        var $selected = $(".selected");
+        var arrrows = {
+            "up": 38,
+            "right": 39,
+            "down": 40,
+            "left": 37
+        },
+        corners = {
+            "topleft": 51,
+            "bottomright": 651
+        },
+        currentPosition = $selected.position();
+        
+        switch (event.which) {
+            case arrrows.up:
+                if ($selected.position().top > corners.topleft) {
+                    $selected.css("top", "-=100");
+                }
+                break;
+            case arrrows.right:
+                if ($selected.position().left < corners.bottomright) {
+                    $selected.css("left", "+=100");
+                }
+                break;
+            case arrrows.down:
+                if ($selected.position().top < corners.bottomright) {
+                    $selected.css("top", "+=100");
+                }
+                break;
+            case arrrows.left:
+                if ($selected.position().left > corners.topleft) {
+                    $selected.css("left", "-=100");
+                }
+                break;
+        }
+    };
+    
+    $(".piece").click(selectPiece);
+    $(window).keydown(movePiece);
+</script>
+
+</body>
+</html>

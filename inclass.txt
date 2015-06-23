@@ -1,0 +1,8 @@
+//todo inclass: 
+As a user, I want to display an HTML menu that visualizes your site
+
+As a developer, use an array or object to hold the hyperlink label and href (web address). Loop through the collection and display in the console.
+
+About Us (about_us.html)
+Contact Us (contact_us.html)
+Home (home.html)

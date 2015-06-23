@@ -1,0 +1,8 @@
+Library link dump
+
+http://microjs.com/
+http://plugins.jquery.com/
+http://bower.io/search/
+http://webdesign.tutsplus.com/categories/javascript
+http://codecall.net/category/programming/javascript/
+http://codegeekz.com/category/javascript/

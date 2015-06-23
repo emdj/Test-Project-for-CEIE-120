@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>assignment.html</title>
+</head>
+
+<body>
+	<h1>Site wide</h1>
+    <h2>Shared HTML menu</h2>
+    
+    <h3>Goal</h3>
+    <p>As a user, I want to see a menu shared across two web pages. The menu includes hyperlinks in the web page.</p>
+    <p>As a dev, build a JavaScript menu snippet that will be shared across many web pages (at least two). Loop through the complex JavaScript object and output HTML hyperlink elements into the body. The home hyperlink has the correct HTML pattern.</p>
+    
+    <h3>Technologies</h3>
+    <ul>
+    	<li>JavaScript</li>
+        <li>JavaScript jQuery</li>
+        <li>JSON</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    
+    <h3>Live demo</h3>
+    <ul id="menu">
+        <li><a href="home.html">Home</a></li>
+    </ul>
+    <script>
+        var menuSrc = {
+            "About Us": "about_us.html",
+            "Contact Us": "contact_us.html",
+            "Products": {
+                "Clearance": "clearance.html",
+                "Today's Sale": "sale.html",
+                "Bargin Bin", "bin.html",
+                "Discounted": "discounted.html"
+            }
+        };
+    </script>
+</body>
+</html>
